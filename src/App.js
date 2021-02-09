@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
+import { FiChevronRight, FiChevronLeft, FiArrowRight } from 'react-icons/fi';
 import data from './data';
 function App() {
   const [image, setImage] = useState(data);
@@ -51,14 +51,26 @@ function App() {
           })}
           </div>
           <div className="section-top-description">
-            <h1>Discover innovative ways to decorate</h1>
-            <p>We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.</p>
-            <button className="prev" onClick={() => setIndex(index - 1)}>
-              <FiChevronLeft />
-            </button>
-            <button className="next" onClick={() => setIndex(index + 1)}>
-              <FiChevronRight />
-            </button>
+            <div className="section-top-description-text">
+              <div className="title">
+                <h1>Discover innovative ways to decorate</h1>
+              </div>
+              <div className="text">
+                <p>We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.</p>
+              </div>
+              <a className="link">Shop Now
+                <FiArrowRight />
+              </a>
+            </div>
+            <div className="button-container">
+              <button className="prev" onClick={() => setIndex(index - 1)}>
+                <FiChevronLeft />
+              </button>
+              <button className="next" onClick={() => setIndex(index + 1)}>
+                <FiChevronRight />
+              </button>
+            </div>
+            
           </div>
       </div>
     </section>
