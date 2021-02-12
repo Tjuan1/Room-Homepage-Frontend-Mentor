@@ -17,7 +17,7 @@ const images = [
     id: 3,
     image:
       '/images/desktop-image-hero-3.jpg',
-    imageMobile: '/images/mobile-image-hero-2.jpg',
+    imageMobile: '/images/mobile-image-hero-3.jpg',
     title: 'image 3',
   }, 
 ]

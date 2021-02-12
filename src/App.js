@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FiChevronRight, FiChevronLeft, FiArrowRight } from 'react-icons/fi';
+
 import data from './data';
 import Header from './Components/Header/Header';
 
@@ -30,6 +30,14 @@ function App() {
     <section className="section">
       <Header />
       <div className="section-top">
+        <div className="button-container-mobile">
+              <button className="prev" onClick={() => setIndex(index - 1)}>
+                  <img src="./svgs/icon-angle-left.svg" />
+              </button>
+              <button className="next" onClick={() => setIndex(index + 1)}>
+                  <img src="./svgs/icon-angle-right.svg" />
+              </button>
+          </div>
         <div className="section-top-image">
           {image.map((img, imageIndex) => {
             const { id, image, imageMobile, title } = img;
@@ -68,10 +76,10 @@ function App() {
             </div>
             <div className="button-container">
               <button className="prev" onClick={() => setIndex(index - 1)}>
-                <FiChevronLeft />
+                <img src="./svgs/icon-angle-left.svg" />
               </button>
               <button className="next" onClick={() => setIndex(index + 1)}>
-                <FiChevronRight />
+                <img src="./svgs/icon-angle-right.svg" />
               </button>
             </div>
             
