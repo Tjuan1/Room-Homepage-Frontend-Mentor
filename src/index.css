@@ -306,6 +306,7 @@ article.nextSlide {
   display: block;
   width:100%;
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 
@@ -352,7 +353,7 @@ article.nextSlide {
 
 }
 
-.link a {
+.link a{
   text-align: left;
 }
 
