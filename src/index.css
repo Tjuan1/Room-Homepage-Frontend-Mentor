@@ -292,6 +292,7 @@ article.nextSlide {
 .section-top-description {
   margin: 0;
   width: 100%;
+  height: 100vh;
   display: block;
   overflow: hidden;
   position: absolute;
@@ -336,7 +337,7 @@ article.nextSlide {
   color: var(--very-dark);
   text-transform: uppercase;
   transition: all 500ms ease-in-out;
-  text-align: left;
+  
 
 }
 
@@ -348,6 +349,10 @@ article.nextSlide {
 .link:hover{
   letter-spacing: 0.7rem;
 
+}
+
+.link a {
+  text-align: left;
 }
 
 .button-container-mobile{
