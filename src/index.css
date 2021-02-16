@@ -15,7 +15,7 @@ Variables
   --very-dark: hsl(0, 0%, 27%);
   /* ### Font*/
   --font-size: 12px;
-  --margin-left: 3.5rem;
+  --margin-left: 104px;
   --radius: 0.25rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -60,10 +60,10 @@ p {
 
 .main-header {
     width: 100%;
-    position: fixed;
-    top: 50px;    
+    position: absolute;
+    top: 48px;    
     background: transparent;
-    padding: 0.5rem 1rem;
+    padding: 0rem 24px;
     z-index: 2;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -83,14 +83,12 @@ p {
     font-size: 1.5rem;
     padding-right: 2rem;
     position: absolute;
-    top:0;   
+    top:-8px;
+    left:160px;   
     transition: all 1000ms cubic-bezier(1,.02,0,1.01);
     opacity: 1;
     transform: translateX(0%);
 }
-
-
-
 
 .main-nav {
     display: none;
@@ -105,7 +103,7 @@ p {
 }
 
 .main-nav__item {
-    margin: 0rem 0.7rem;
+    margin: 0rem 1.5rem;
 }
 
 .main-nav__item a {
@@ -126,7 +124,7 @@ p {
     display: flex;
     position: absolute;  
     z-index: 101;
-    top: -50px;
+    top: -57px;
     left: 0;
     background: var(--white);
     width: 100%;
@@ -145,10 +143,14 @@ p {
     position: absolute;
     top:35px;
     list-style: none;
-    margin: 6px 5rem;
+    margin: 6px 1rem;
     padding: 0;
     text-align: center;
     text-decoration-style: none;
+  }
+
+  .mobile-nav__item:first-of-type{
+    padding-left: 3rem;
   }
   
   .mobile-nav__item {
@@ -160,7 +162,7 @@ p {
     text-decoration: none;
     color: var(--black);
     font-weight: 600;
-    padding: 3px 1rem;
+    padding: 3px 0.7rem;
   }
 
   .toggle-button {
@@ -172,6 +174,7 @@ p {
     padding-bottom: 0;
     vertical-align: middle;
     z-index: 1;
+    text-align: left;
   }
   
   .toggle-button:focus {
@@ -212,7 +215,7 @@ p {
   
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   h2 {
     font-size: 1.75rem;
@@ -246,9 +249,9 @@ p {
 
 .section-bottom {
   width: 100%;
-  height: 266px;
   max-height: auto;
-  display: block;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   position:relative;
   }
@@ -285,11 +288,12 @@ article.nextSlide {
 
 .section-top-description {
   margin: 0;
-  width: 90%;
+  width: 100%;
   display: block;
   overflow: hidden;
   position: absolute;
   top: 360px;
+  margin: 0 32px;
 }
 
 .section-top-description-text{
@@ -302,28 +306,29 @@ article.nextSlide {
 
 .title {
   vertical-align: middle;
-  line-height: 1.5rem;
+  line-height: 2rem;
   text-align: left;
   width: 90%;
   display: flex;
   margin-top: 15%;
   color: var(--black);
-  margin-left: var(--margin-left);
+  margin-left: none;
 }
 
 .text {
   width: 90%;
   display: flex;
   color: var(--dark-gray);
-  margin-top: 1.5rem;
-  margin-left: var(--margin-left);
+  margin-top: 20px;
+  margin-left: none;
   line-height: 1.2rem;
+  padding-bottom: 56px;
 }
 
 .link{
   letter-spacing: 0.2rem;
-  margin-top: 1rem;
-  margin-left: var(--margin-left);
+  margin-top: 32px;
+  margin-left: none;
   color: var(--very-dark);
   text-transform: uppercase;
   transition: all 500ms ease-in-out;
@@ -344,7 +349,7 @@ article.nextSlide {
   width: 100%;
   display: flex;
   position: absolute;
-  top:296px;
+  bottom:0;
   z-index: 3;
   justify-content: flex-end;
 }
@@ -366,8 +371,8 @@ article.nextSlide {
   transform: translateY(-50%); */
   background: var(--black);
   color: var(--white);
-  width: 5rem;
-  height: 5rem;
+  width: 56px;
+  height: 56px;
   place-items: center;
   border-color: transparent;
   font-size: 2rem;
@@ -398,10 +403,9 @@ article.nextSlide {
 .section-bottom-left{
   margin: 0;
   width: 100%;
-  height: 266px;
   position: relative;
-  display: block;
-  overflow: hidden;
+  display: flex;
+  overflow: none;
 }
 
 .section-bottom-left img,
@@ -415,16 +419,17 @@ article.nextSlide {
   width: 100%;
   height: auto;
   position: relative;
-  display: block;
-  overflow: hidden;
+  display: flex;
+  overflow: none;
 }
 
 .section-bottom-middle-text{
   margin: auto;
   height: 100%;
-  padding:0rem 1rem 2rem 1rem;
+  padding:32px;
   width: 100%;
   color: var(--dark-gray);
+  line-height: 1.2rem;
 }
 
 .section-bottom-middle-text h4{
@@ -440,10 +445,9 @@ article.nextSlide {
 .section-bottom-right{
   margin: 0;
   width:100vw;
-  height: 100%;
   position: relative;
-  display: block;
-  overflow: hidden;
+  display: flex;
+  overflow: none;
 }
 
 
@@ -461,6 +465,9 @@ article.nextSlide {
   
   .main-nav {
     display: flex;
+    position: absolute;
+    top:8px;
+    left: 180px;
   }
   .img-mobile {
     display: none;
@@ -482,7 +489,7 @@ article.nextSlide {
   .section-top {
     margin: 0;
     width: 100vw;
-    height: 67vh;
+    height: 528px;
     max-height: 533px;
     display: flex;
     overflow: hidden;
@@ -493,11 +500,12 @@ article.nextSlide {
 .section-bottom {
   margin: 0;
   width: 100vw;
-  height: 33vh;
+  height: 252px;
   max-height: 266px;
   display: flex;
   overflow: hidden;
   flex: 0 0 100%;
+  flex-direction: row;
 
   }
 
@@ -510,6 +518,14 @@ article.nextSlide {
   position: relative;
   display: flex;
   overflow: hidden;
+}
+
+.prev,
+.next {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 article {
@@ -540,7 +556,7 @@ article.nextSlide {
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
   flex-wrap: wrap;
   top:0;
 }
@@ -571,6 +587,7 @@ article.nextSlide {
   margin-top: 1.5rem;
   margin-left: var(--margin-left);
   line-height: 1.2rem;
+  padding-bottom: 0px;
 }
 
 .link{
@@ -639,6 +656,7 @@ article.nextSlide {
   height: 100%;
   padding:0rem 2rem 0rem 3.5rem;
   width: 100%;
+
   
 }
 

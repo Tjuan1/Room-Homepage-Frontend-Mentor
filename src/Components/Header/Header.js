@@ -1,14 +1,12 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState} from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 const Header = () => {
     const [toggleBar, setToggleBar] = useState(false);
-    const[brand, setBrand] = useState(false);
 
 
     const showToggleDrawer = () => {
         setToggleBar(!toggleBar);
-        setBrand(!brand);
       }
 
     const animationTiming = {

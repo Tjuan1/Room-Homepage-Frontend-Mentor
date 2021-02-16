@@ -30,6 +30,7 @@ function App() {
     <section className="section">
       <Header />
       <div className="section-top">
+        <div className="section-top-image">
         <div className="button-container-mobile">
               <button className="prev" onClick={() => setIndex(index - 1)}>
                   <img src="./svgs/icon-angle-left.svg" />
@@ -38,7 +39,6 @@ function App() {
                   <img src="./svgs/icon-angle-right.svg" />
               </button>
           </div>
-        <div className="section-top-image">
           {image.map((img, imageIndex) => {
             const { id, image, imageMobile, title } = img;
 
