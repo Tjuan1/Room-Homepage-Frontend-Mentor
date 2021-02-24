@@ -1,6 +1,6 @@
 # Frontend Mentor - Room homepage
 
-![Design preview for the Room homepage coding challenge](./design/desktop-preview.jpg)
+Challenge: https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq
 
 ## Welcome! 👋
 
@@ -15,6 +15,8 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size ✅
 - See hover states for all interactive elements on the page ✅
 - Navigate the slider using either their mouse/trackpad or keyboard ✅
+
+This is the result: https://room-homepage-frontend-mentor.vercel.app/
 
 
 ## Giving feedback
